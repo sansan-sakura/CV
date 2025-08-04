@@ -1,5 +1,5 @@
-import { FrontendDeveloperCv } from '@/components/frontend-developer-cv';
+import { Cv } from '@/components/cv';
 
 export default function Home() {
-  return <FrontendDeveloperCv />;
+  return <Cv />;
 }
