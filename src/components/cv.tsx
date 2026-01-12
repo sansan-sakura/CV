@@ -6,14 +6,14 @@ import Image from 'next/image';
 export function Cv() {
   return (
     <div className='min-h-screen min-w-screen grid items-center justify-center'>
-      <div className='container mx-auto p-4 sm:p-6 space-y-8 max-w-3xl'>
-        <header className='text-center space-y-4'>
+      <div className='container mx-auto p-4 sm:p-6 space-y-8 max-w-6xl'>
+        <header className='text-center'>
           <div className='mx-auto w-24 h-24 sm:w-28 sm:h-28 relative mb-4'>
             <Image src='/cv/image/portrait.jpg' alt="Keisuke Tanaka's profile picture" layout='fill' className='rounded-full' />
           </div>
           <h1 className='text-3xl sm:text-4xl font-bold'>Keisuke Tanaka</h1>
-          <h2 className='text-xl sm:text-2xl text-neutral-500 dark:text-neutral-400'>Fullstack Software Engineer</h2>
-          <div className='flex justify-center items-center space-x-4 flex-col sm:flex-row'>
+          <h2 className='text-xl sm:text-2xl text-neutral-500 dark:text-neutral-400 mt-1'>Software Developer (Full Stack)</h2>
+          <div className='flex justify-center items-center space-x-4 flex-col sm:flex-row mt-2'>
             <a target='_blank' href='mailto:keisuketanaka97@gmail.com' className='flex items-center text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-50'>
               <Mail className='w-4 h-4 mr-2' />
               keisuketanaka97@gmail.com
@@ -22,9 +22,9 @@ export function Cv() {
               <Github className='w-4 h-4 mr-2' />
               github.com/kei0528
             </a>
-            <a target='_blank' href='https://maps.app.goo.gl/7o6gW7KqH8GBc6aaA' className='flex items-center text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-50'>
+            <a target='_blank' href='https://maps.app.goo.gl/rYKULbZfgniS6d6Q8' className='flex items-center text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-50'>
               <MapPin className='w-4 h-4 mr-2' />
-              Tyringe | Kalix, Sweden
+              Kalix, Sweden
             </a>
           </div>
         </header>
@@ -33,7 +33,7 @@ export function Cv() {
           <CardHeader>
             <CardTitle>Summary</CardTitle>
           </CardHeader>
-          <CardContent>Full-stack Software Engineer with 5+ years of experience building scalable, maintainable web applications. Adept at frontend and backend development, with a strong focus on test-driven development and clean architecture. Currently gaining hands-on experience in DevOps and cloud practices, contributing to improvements in deployment workflows using GitHub Actions and AWS in a collaborative team setting.</CardContent>
+          <CardContent>Software Developer with over five years of experience in early-stage and growth-stage startups. Specialized in JavaScript and TypeScript, with strong experience in building and maintaining large-scale web applications. Hands-on experience with authentication and authorization systems, cloud infrastructure, and DevOps practices. Curious by nature, motivated by problem solving, and focused on building reliable software that lasts.</CardContent>
         </Card>
 
         <Card>
@@ -43,25 +43,22 @@ export function Cv() {
           <CardContent className='space-y-4'>
             <div className='grid gap-2'>
               <div className='text-sm'>
-                <b>Frontend: </b>TypeScript / React / Next.js
+                <b>Web Development: </b>JavaScript, TypeScript, React, Next.js, Express, NestJS, Jest, Cypress
               </div>
               <div className='text-sm'>
-                <b>Backend: </b>Node.js / Express / Nest.js
+                <b>Databases & BaaS: </b>PostgreSQL, Firebase, Supabase, Prisma ORM
               </div>
               <div className='text-sm'>
-                <b>Database: </b>PostgresSQL / Firebase
+                <b>DevOps & Cloud: </b>AWS, Terraform, Docker, GitHub Actions, Grafana
               </div>
               <div className='text-sm'>
-                <b>Devops & Cloud: </b>Github Actions / Docker / AWS (EC2, CloudWatch)
-              </div>
-              <div className='text-sm'>
-                <b>Other: </b>TDD/ Microservice architecture / Agile Development
+                <b>Other Languages (Familiar): </b>Java, C# (.NET), Go
               </div>
             </div>
             <div>
               <h3 className='font-semibold mb-2'>Languages</h3>
               <div className='flex flex-wrap gap-2'>
-                <div className='text-sm'>Japanese (Native), German (Fluent), English (Fluent), Swedish (Beginner)</div>
+                <div className='text-sm'>Japanese (Native), German (Fluent), English (Fluent), Swedish (A2 - B1)</div>
               </div>
             </div>
           </CardContent>
@@ -73,28 +70,29 @@ export function Cv() {
           </CardHeader>
           <CardContent className='space-y-6'>
             <div>
-              <h3 className='font-semibold'>Software Engineer (Platform & DevOps)</h3>
+              <h3 className='font-semibold'>Software Developer (Platform & DevOps)</h3>
               <p className='text-sm text-neutral-500 dark:text-neutral-400'>Trialbee AB | 2025 - Present</p>
               <ul className='list-disc list-outside pl-4 mt-2 space-y-1'>
-                <li>Developing and maintaining clinical research web application with a strong focus on test-driven development</li>
-                <li>Collaborating cross-functionally with product and QA teams to deliver scalable and compliant features in a regulated domain</li>
-                <li>Improving CI/CD workflows with GitHub Actions, aiming for reliable daily deployments and faster feedback cycles</li>
+                <li>Developing and maintaining a large-scale clinical research web application serving over one million users, with a strong focus on authentication and authorization</li>
+                <li>Collaborating cross-functionally with product and QA teams to deliver scalable and compliant features in a regulated domain, while supporting and mentoring junior developers</li>
+                <li>Improving developer experience by enhancing observability and supporting teams in configuring AWS infrastructure using IaC (Terraform)</li>
               </ul>
             </div>
             <div>
-              <h3 className='font-semibold'>Fullstack Developer</h3>
+              <h3 className='font-semibold'>Full Stack Developer</h3>
               <p className='text-sm text-neutral-500 dark:text-neutral-400'>Octily GmbH | 2021 - 2025</p>
               <ul className='list-disc list-outside pl-4 mt-2 space-y-1'>
                 <li>Led development of a scalable CMS platform serving over 50,000 daily users, built with React and TypeScript</li>
-                <li>Introduced code review guidelines and mentorship program</li>
-                <li>Architected and delivered 10+ small to mid-sized web apps using modern JS stacks</li>
+                <li>Introduced development guidelines and a mentorship program to improve code quality and onboarding</li>
+                <li>Architected and delivered 10+ micro-frontend applications using modern JS stacks</li>
               </ul>
             </div>
             <div>
               <h3 className='font-semibold'>Full Stack Developer</h3>
               <p className='text-sm text-neutral-500 dark:text-neutral-400'>Freelance | 2020 - 2024</p>
               <ul className='list-disc list-outside pl-4 mt-2 space-y-1'>
-                <li>Worked part-time as a freelance developer alongside full-time employment, contributing to international B2B projects and legacy modernization.</li>
+                <li>Worked as a freelance full stack developer alongside full-time employment, contributing to international B2B projects</li>
+                <li>Supported legacy codebase migrations and feature development across frontend and backend systems</li>
               </ul>
             </div>
           </CardContent>
