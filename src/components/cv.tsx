@@ -1,103 +1,202 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Github, Mail, MapPin } from 'lucide-react';
-import Image from 'next/image';
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+
+const skills = [
+  { label: "Web Development", value: "JavaScript/TypeScript, React, Express, Jest" },
+  { label: "Databases & BaaS", value: "SQLite, MongoDB, Redis, Firebase" },
+  { label: "DevOps & Cloud", value: "GCP, Terraform, Docker, GitHub Actions" },
+  { label: "Other Languages", value: "C, Java, Python, PHP" },
+];
+
+const languages = [
+  { name: "Japanese", level: "Native" },
+  { name: "English", level: "Fluent" },
+  { name: "German", level: "C1" },
+  { name: "Swedish", level: "A2–B1" },
+];
+
+const experience = [
+  {
+    role: "Software Developer",
+    company: "IKEA",
+    period: "2024 - Present",
+    bullets: [
+      "Built and maintained internal SEO-customization tools used by the specialist team to manage and optimize content faster.",
+      "Improved application performance and load times, streamlining daily workflows for the SEO/SEM team.",
+      "Automated recurring SEO processes, including metadata updates, using AI-assisted tooling.",
+      "Partnered with cross-functional teams to translate business needs into technical solutions.",
+    ],
+  },
+  {
+    role: "Full Stack Developer",
+    company: "GreenCarLane",
+    period: "2024",
+    bullets: [
+      "Led development of a multi-functional company website used to showcase the business model at exhibitions.",
+      "Introduced development guidelines and a mentorship program to raise code quality and speed up onboarding.",
+      "Supported recruitment of frontend developers, helping build out the development team.",
+    ],
+  },
+  {
+    role: "Full Stack Developer",
+    company: "PLUSCLASS SPORTS INCUBATION",
+    period: "2022 - 2024",
+    bullets: [
+      "Improved application performance by over 80% by optimizing server- and client-side rendering and introducing caching.",
+      "Maintained and developed a B2B web application used by 8,000+ active users.",
+      "Ran team task management and code reviews to keep delivery quality high.",
+    ],
+  },
+];
+
+const education = [
+  {
+    school: "Tokyo Online University",
+    program: "B.A., Information and Management",
+    period: "2021 - Present",
+  },
+  {
+    school: "Technigo Coding Bootcamp",
+    program: "Web Development Program",
+    period: "2023 - 2024",
+  },
+];
 
 export function Cv() {
   return (
-    <div className='min-h-screen min-w-screen grid items-center justify-center'>
-      <div className='container mx-auto p-4 sm:p-6 space-y-8 max-w-6xl'>
-        <header className='text-center'>
-          <div className='mx-auto w-24 h-24 sm:w-28 sm:h-28 relative mb-4'>
-            <Image src='/cv/image/portrait.jpg' alt="Keisuke Tanaka's profile picture" layout='fill' className='rounded-full' />
-          </div>
-          <h1 className='text-3xl sm:text-4xl font-bold'>Keisuke Tanaka</h1>
-          <h2 className='text-xl sm:text-2xl text-neutral-500 dark:text-neutral-400 mt-1'>Software Developer (Full Stack)</h2>
-          <div className='flex justify-center items-center space-x-4 flex-col sm:flex-row mt-2'>
-            <a target='_blank' href='mailto:keisuketanaka97@gmail.com' className='flex items-center text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-50'>
-              <Mail className='w-4 h-4 mr-2' />
-              keisuketanaka97@gmail.com
+    <div className="min-h-screen bg-[#FAFAF7] text-[#2A2A28] py-10 px-4 sm:py-16">
+      <div className="mx-auto max-w-4xl">
+        {/* Header */}
+        <header className="border-b border-[#E3DFD6] pb-8 mb-10">
+          <p className="text-xs tracking-[0.25em] uppercase text-[#C97B84] font-semibold mb-2">
+            Full Stack Developer
+          </p>
+          <h1 className="font-serif text-4xl sm:text-5xl font-medium tracking-tight text-[#211F1D]">
+            Sakura Tanaka
+          </h1>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 mt-5 text-sm text-[#5B564E]">
+            <a
+              href="mailto:sito6496t@gmail.com"
+              className="flex items-center gap-1.5 hover:text-[#C97B84] transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              sito6496t@gmail.com
             </a>
-            <a target='_blank' href='https://github.com/kei0528' className='flex items-center text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-50'>
-              <Github className='w-4 h-4 mr-2' />
-              github.com/kei0528
+            <a
+              href="https://github.com/sansan-sakura"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 hover:text-[#C97B84] transition-colors"
+            >
+              <Github className="w-4 h-4" />
+              github.com/sansan-sakura
             </a>
-            <a target='_blank' href='https://maps.app.goo.gl/rYKULbZfgniS6d6Q8' className='flex items-center text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-50'>
-              <MapPin className='w-4 h-4 mr-2' />
+            <a
+              href="https://www.linkedin.com/in/sakura-tanaka-kalix/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 hover:text-[#C97B84] transition-colors"
+            >
+              <Linkedin className="w-4 h-4" />
+              linkedin.com/in/sakura-tanaka-kalix
+            </a>
+            <span className="flex items-center gap-1.5">
+              <MapPin className="w-4 h-4" />
               Kalix, Sweden
-            </a>
+            </span>
           </div>
         </header>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Summary</CardTitle>
-          </CardHeader>
-          <CardContent>Software Developer with over five years of experience in early-stage and growth-stage startups. Specialized in JavaScript and TypeScript, with strong experience in building and maintaining large-scale web applications. Hands-on experience with authentication and authorization systems, cloud infrastructure, and DevOps practices. Curious by nature, motivated by problem solving, and focused on building reliable software that lasts.</CardContent>
-        </Card>
+        <div className="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-10">
+          {/* Sidebar */}
+          <aside className="space-y-8">
+            <section>
+              <h2 className="font-serif text-lg mb-3 text-[#211F1D]">Summary</h2>
+              <p className="text-sm leading-relaxed text-[#5B564E]">
+                Full-stack developer with 4 years across an early-stage startup and a large
+                enterprise, shipping internal tools, B2B applications, and performance-critical
+                front ends. Comfortable owning a feature end to end, from planning through
+                deployment.
+              </p>
+            </section>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Skills</CardTitle>
-          </CardHeader>
-          <CardContent className='space-y-4'>
-            <div className='grid gap-2'>
-              <div className='text-sm'>
-                <b>Web Development: </b>JavaScript, TypeScript, React, Next.js, Express, NestJS, Jest, Cypress
+            <section>
+              <h2 className="font-serif text-lg mb-3 text-[#211F1D]">Skills</h2>
+              <div className="space-y-3">
+                {skills.map((s) => (
+                  <div key={s.label}>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-[#C97B84]">
+                      {s.label}
+                    </p>
+                    <p className="text-sm text-[#5B564E] mt-0.5">{s.value}</p>
+                  </div>
+                ))}
               </div>
-              <div className='text-sm'>
-                <b>Databases & BaaS: </b>PostgreSQL, Firebase, Supabase, Prisma ORM
-              </div>
-              <div className='text-sm'>
-                <b>DevOps & Cloud: </b>AWS, Terraform, Docker, GitHub Actions, Grafana
-              </div>
-              <div className='text-sm'>
-                <b>Other Languages (Familiar): </b>Java, C# (.NET), Go
-              </div>
-            </div>
-            <div>
-              <h3 className='font-semibold mb-2'>Languages</h3>
-              <div className='flex flex-wrap gap-2'>
-                <div className='text-sm'>Japanese (Native), German (Fluent), English (Fluent), Swedish (A2 - B1)</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            </section>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Work Experience</CardTitle>
-          </CardHeader>
-          <CardContent className='space-y-6'>
-            <div>
-              <h3 className='font-semibold'>Software Developer (Platform & DevOps)</h3>
-              <p className='text-sm text-neutral-500 dark:text-neutral-400'>Trialbee AB | 2025 - Present</p>
-              <ul className='list-disc list-outside pl-4 mt-2 space-y-1'>
-                <li>Developing and maintaining a large-scale clinical research web application serving over one million users, with a strong focus on authentication and authorization</li>
-                <li>Collaborating cross-functionally with product and QA teams to deliver scalable and compliant features in a regulated domain, while supporting and mentoring junior developers</li>
-                <li>Improving developer experience by enhancing observability and supporting teams in configuring AWS infrastructure using IaC (Terraform)</li>
+            <section>
+              <h2 className="font-serif text-lg mb-3 text-[#211F1D]">Languages</h2>
+              <ul className="space-y-1.5">
+                {languages.map((l) => (
+                  <li key={l.name} className="flex justify-between text-sm text-[#5B564E]">
+                    <span>{l.name}</span>
+                    <span className="text-[#8A857A]">{l.level}</span>
+                  </li>
+                ))}
               </ul>
-            </div>
-            <div>
-              <h3 className='font-semibold'>Full Stack Developer</h3>
-              <p className='text-sm text-neutral-500 dark:text-neutral-400'>Octily GmbH | 2021 - 2025</p>
-              <ul className='list-disc list-outside pl-4 mt-2 space-y-1'>
-                <li>Led development of a scalable CMS platform serving over 50,000 daily users, built with React and TypeScript</li>
-                <li>Introduced development guidelines and a mentorship program to improve code quality and onboarding</li>
-                <li>Architected and delivered 10+ micro-frontend applications using modern JS stacks</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className='font-semibold'>Full Stack Developer</h3>
-              <p className='text-sm text-neutral-500 dark:text-neutral-400'>Freelance | 2020 - 2024</p>
-              <ul className='list-disc list-outside pl-4 mt-2 space-y-1'>
-                <li>Worked as a freelance full stack developer alongside full-time employment, contributing to international B2B projects</li>
-                <li>Supported legacy codebase migrations and feature development across frontend and backend systems</li>
-              </ul>
-            </div>
-          </CardContent>
-        </Card>
+            </section>
+          </aside>
+
+          {/* Main column */}
+          <main className="space-y-10">
+            <section>
+              <h2 className="font-serif text-lg mb-5 text-[#211F1D]">Experience</h2>
+              <div className="space-y-8">
+                {experience.map((job) => (
+                  <div
+                    key={job.role + job.company}
+                    className="relative pl-5 border-l-2 border-[#E3DFD6]"
+                  >
+                    <div className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[#C97B84]" />
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                      <h3 className="font-medium text-[#211F1D]">{job.role}</h3>
+                      <span className="text-xs text-[#8A857A]">{job.period}</span>
+                    </div>
+                    <p className="text-sm text-[#C97B84] font-medium mb-2">{job.company}</p>
+                    <ul className="space-y-1.5">
+                      {job.bullets.map((b, i) => (
+                        <li key={i} className="text-sm leading-relaxed text-[#5B564E] flex gap-2">
+                          <span className="text-[#C97B84] mt-1.5 block w-1 h-1 rounded-full bg-[#C97B84] shrink-0" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-serif text-lg mb-5 text-[#211F1D]">Education</h2>
+              <div className="space-y-4">
+                {education.map((ed) => (
+                  <div
+                    key={ed.school}
+                    className="flex flex-wrap items-baseline justify-between gap-x-3"
+                  >
+                    <div>
+                      <h3 className="font-medium text-[#211F1D] text-sm">{ed.school}</h3>
+                      <p className="text-sm text-[#5B564E]">{ed.program}</p>
+                    </div>
+                    <span className="text-xs text-[#8A857A]">{ed.period}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </main>
+        </div>
       </div>
     </div>
   );
 }
+
+export default Cv;
